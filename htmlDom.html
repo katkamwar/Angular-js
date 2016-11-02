@@ -1,0 +1,25 @@
+<html>
+   <head>
+      <title>Angular JS Controller</title>
+      <script src = "angular.min.js"></script>
+   </head>
+   <body>
+      
+      <div ng-app="">
+      <input type="checkbox" ng-model="enableDisableButton">show button
+      <button ng-disabled="enableDisableButton">Click Me!!!!!!!</button>
+      <br>
+      <br>
+      <input type="checkbox" ng-model="showHide1">show button
+      <button ng-show="showHide1">Click Me!!!!</button>
+      <br>
+      <br>
+      <input type="checkbox" ng-model="showHide2">show button
+      <button ng-hide="showHide2">Click Me!!!!</button>
+      <br>
+      <br>
+      Total Clicks: {{clickCounter}}
+      <button ng-click="clickCounter=clickCounter+1">click me!</button>
+</div>
+   </body>
+</html>
