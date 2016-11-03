@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="D:\Web Developement\Angular\angular.min.js"></script>
+</head>
+<body>
+<div ng-app="" ng-init="countries=[{Relation:'friend',name:'shweta'},
+{Relation:'roommate',name:'Raj'}]">
+<p>Enter your name:<input type="text" ng-model="name"></p>
+<p>Hello <span ng-bind="name"></span>!!!!!!!!!!!!!!!</p>
+<ol>
+	<li ng-repeat="country in countries">
+	{{'Friend:'+country.Relation+ ',Name:'+country.name}}
+	</li>
+
+</ol>
+</div>
+</body>
+</html>

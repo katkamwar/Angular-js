@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angularjs filter</title>
+	<script src="angular.min.js"></script>
+</head>
+<body>
+<h2>Example for AnngularJs filter</h2>
+<div ng-app="myApp" ng-controller="ProductController">
+Enter product Name:<input type="text" ng-model="product.pname">
+<br>
+<br>
+Enter product price:<input type="text" ng-model="product.price">
+<br>
+<br>
+Your Product Name(In uppercase):{{product.pname | uppercase}}
+<br>
+Your Product Name(In lowercase):{{product.pname | lowercase}}
+<br>
+Product price:{{product.price|currency}}
+<br>
+Product List:<ul>
+	<li ng-repeat="products in product.plist| filter:name |orderBy:'prices'">
+		{{'name: '+products.name +', price: '+ products.prices}}
+	</li>
+</ul>
+
+</div>
+<script>
+	var myApp=angular.module("myApp",[]);
+	myApp.controller("ProductController",function ($scope) {
+$scope.product={
+	pname:"ASD",
+	price:"345",
+	plist:[{name:'zxc',prices:123},{name:'dfg',prices:456}]
+
+
+};
+
+	});
+</script>
+</body>
+</html>

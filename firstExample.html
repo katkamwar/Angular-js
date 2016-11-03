@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="D:\Web Developement\Angular\angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+<div ng-controller="myController">
+	{{message}}
+
+</div>
+
+<script>
+	
+	angular.module("myApp",[])
+	.controller("myController",function ($scope) {
+
+		$scope.message="Hello everyone in the world of Angularjs";
+	});
+
+</script>
+</body>
+</html>
