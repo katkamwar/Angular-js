@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angularjs</title>
+	<script src="angular.min.js"></script>
+</head>
+<body>
+<div ng-app="mainApp" ng-controller="Scontroller">
+<form name="studentForm" novalidate>
+Enter your Name:<input type="text" ng-model="Fname" name="Fname" required>
+<span style="color:red" ng-show="studentForm.Fname.$dirty && studentForm.Fname.$invalid">
+<span ng-show="studentForm.Fname.$error.required">name required</span></span>
+<br>
+<br>
+<button  
+ ng-disabled="studentForm.Fname.$dirty && studentForm.Fname.$invalid ng-click="submit()">Submit</button>
+</form>
+</div>
+<script>
+	var mainApp=angular.module("mainApp",[]);
+	mainApp.controller("Scontroller",function ($scope) {
+		$scope.Fname="shweta"
+	});
+</script>
+</body>
+</html>
